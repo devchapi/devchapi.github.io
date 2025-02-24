@@ -507,3 +507,15 @@ footer h2{
     font-size: 2Srem;
     font-weight: normal;
 }
+
+.whatsapp-link {
+    color: #28a745; /* Same green color */
+    text-decoration: none; /* Remove underline */
+}
+.smaller-text {
+    font-size: 3.5em; /* Adjust the size as needed */
+    font-weight: normal; /* Adjust the weight as needed */
+}
+.whatsapp-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
