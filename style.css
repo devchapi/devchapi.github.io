@@ -30,6 +30,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    padding-top: 80px;
 }
 
 .hz-margin{
@@ -71,14 +72,17 @@ h3{
     display: block;
     font-size: 1rem;
     background: transparent;
-    border: 1px solid #212121;
     padding: 25px 50px;
     border-radius: 50px;
     width: fit-content;
     margin: 30px 0;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
+    background: var(--primary-color);
+    border: none;
+    color: white;
     box-shadow: 2px 2px 10px var(--shadow-color);
+    transition: background 0.3s ease-in-out;
 }
 .huge-btn:hover{
     color: grey;
@@ -96,10 +100,13 @@ h3{
 }
 /* <===================NAVBAR===================> */
 
-nav{
-    height: 3vh;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-bottom: 20vh;
+    z-index: 1000;
+    background-color: var(--background-color); /* Asigna un fondo para que sea legible sobre el contenido */
 }
 label.logo{
     font-size: 35px;
@@ -234,6 +241,29 @@ a:hover{
         flex-direction: column;
         justify-content: center;
     }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--background-color); /* Fondo para mejorar legibilidad */
+        background-color: var(--background-color);
+        height: 60px;         /* Altura reducida */
+        line-height: 60px;    /* Para alinear verticalmente */
+        padding: 0 20px;
+    }
+
+    .checkbtn {
+        position: fixed;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    body {
+        padding-top: 80px; /* Ajusta este valor según la altura real de tu nav */
+    }
     
     /* Estilos para los botones grandes, para que sean más visibles */
     .huge-btn {
@@ -267,6 +297,25 @@ a:hover{
     .gallery-img:nth-child(2) {
         position: relative;
         left: 0; /* Elimina el margen negativo que causaba desplazamiento */
+    }
+
+    #back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        cursor: pointer;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+      }
+      
+    #back-to-top:hover {
+        background-color: #444;
     }
 }
 
