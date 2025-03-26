@@ -31,6 +31,8 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
     padding-top: 80px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* iOS scroll nativo */
 }
 
 .hz-margin{
@@ -89,7 +91,7 @@ h3{
     border-color: grey;
 }
 .v-reposition-container{
-    position: absolute;
+    position: relative; /* en vez de absolute */
     left: 0;
     width: 100vw;
 }
@@ -479,13 +481,14 @@ a:hover{
 /* <===================HANDS===================> */
 
 .hands{
-    height: 100vh; /* Ajusta a la altura del viewport */
+    height: 100dvh; /* Ajusta a la altura del viewport */
     width: 100%;
     background-image: url(images/IMG_1934.jpg);
-    background-size: cover;
-    background-position: center bottom; /* Enfoca la parte inferior */
+    background-size: 100% auto;
+    background-position: center; /* Enfoca la parte inferior */
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
     /* <===================STAY===================> */
