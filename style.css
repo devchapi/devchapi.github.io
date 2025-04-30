@@ -54,17 +54,6 @@ h3{
     font-weight: 500;
     color: var(--primary-color);
 }
-.reveal{
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-  }
-  
-  .reveal.active{
-    transform: translateY(0);
-    opacity: 1;
-  }
 .text{
     font-family: 'Quicksand', sans-serif;
     font-size: var(--text-size);
@@ -98,7 +87,6 @@ h3{
 .h-reposition-container{
     width: 100vw;
     position: relative;
-    top: 100vh;
 }
 /* <===================NAVBAR===================> */
 
@@ -169,11 +157,12 @@ a:hover{
         width: 100%;
         height: 100vh;
         backdrop-filter: blur(5px);
-        top: 80px;
         font-weight: bold;
         left: -100%;
         text-align: center;
         transition: all .5s;
+        top: 0;
+        padding-top: 80px; /* deja espacio interno debajo del botón */
     }
     nav ul li{
         display: block;
@@ -482,13 +471,10 @@ a:hover{
 
 .hands{
     height: 100dvh; /* Ajusta a la altura del viewport */
-    width: 100%;
     background-image: url(images/IMG_1934.jpg);
-    background-size: 100% auto;
+    background-size: 90% auto;
     background-position: center; /* Enfoca la parte inferior */
-    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-attachment: scroll;
 }
 
     /* <===================STAY===================> */
@@ -523,10 +509,12 @@ a:hover{
 /* <===================REGISTRY===================> */
 
 #registry{
-    padding: 20vh var(--horizontal-margin-spacing) 0 var(--horizontal-margin-spacing); 
+    padding: 20vh var(--horizontal-margin-spacing); /* puedes ajustar 20vh */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;   /* centra horizontalmente el contenido */
+    justify-content: center;
+    text-align: center;    /* centra el texto internamente */
 }
 .registry-container{
     display: block;
@@ -544,7 +532,6 @@ a:hover{
     background-size: cover;
     background-position-y: top;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
 }
 .registry-img-sm{
     display: none;
@@ -578,11 +565,13 @@ a:hover{
 
 /* <===================PARTING MESSAGE===================> */
 .parting-message h1{
-    margin-top: 10vh;
     text-align: center;
+    margin: 0 auto;
+    width: 100%;
 }
 .parting-message button{
-    margin:  10vh auto;
+    margin: 5vh auto;
+    display: block;
 }
 
 /* <===================FOOTER===================> */
