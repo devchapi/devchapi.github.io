@@ -190,7 +190,7 @@ a:hover{
     justify-content: space-between;
 }
 .home-img{
-    background-image: url(images/IMG_1767.jpg);
+    background-image: url(images/copiaIMG_1767.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -362,7 +362,6 @@ a:hover{
 /* <===================STORY===================> */
 
 #story{
-    padding-top: 10vh;
     display: flex;
     flex-direction: row;
     margin: 10vh 0;
